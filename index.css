@@ -1,0 +1,451 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    width: 100%;
+    background-color: #111827;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 50px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.logo a:hover{
+    color: #3b82f6;
+}
+
+/* MENU */
+
+.menu{
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #3b82f6;
+}
+
+/* =========================
+   HERO / MAIN
+========================= */
+
+.content{
+    width: 100%;
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+
+    color: white;
+}
+
+/* TÍTULO */
+
+.content h1{
+    font-size: 58px;
+
+    max-width: 900px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+/* TEXTO */
+
+.content p{
+    font-size: 20px;
+
+    max-width: 750px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+/* BOTÃO */
+
+.cta-button{
+    background-color: white;
+    color: #2563eb;
+
+    padding: 16px 40px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cta-button:hover{
+    background-color: #dbeafe;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.Produtos{
+    padding: 90px 50px;
+
+    text-align: center;
+}
+
+/* TÍTULO */
+
+.Produtos h1{
+    font-size: 45px;
+
+    margin-bottom: 20px;
+
+    color: #111827;
+}
+
+/* TEXTO */
+
+.Produtos > p{
+    max-width: 850px;
+
+    margin: 0 auto 60px auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+/* CONTAINER DOS CARDS */
+
+.container-encanadores{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 35px;
+}
+
+/* CARD */
+
+.card{
+    background-color: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    border: 3px solid #e5e7eb;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+/* HOVER CARD */
+
+.card:hover{
+    transform: translateY(-10px);
+
+    border-color: #2563eb;
+
+    box-shadow: 0px 15px 35px rgba(37,99,235,0.2);
+}
+
+/* TÍTULO CARD */
+
+.card h2{
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+    color: #111827;
+}
+
+/* TEXTO CARD */
+
+.card p{
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================
+   CADASTRO PROFISSIONAL
+========================= */
+
+.cadastro-profissional{
+    width: 100%;
+
+    padding: 100px 20px;
+
+    background-color: #111827;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TÍTULO */
+
+.cadastro-profissional h1{
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+/* TEXTO */
+
+.cadastro-profissional p{
+    max-width: 700px;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    margin-bottom: 50px;
+
+    color: #d1d5db;
+}
+
+/* FORMULÁRIO */
+
+.form-profissional{
+    width: 100%;
+    max-width: 700px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+}
+
+/* INPUT GROUP */
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 25px;
+}
+
+/* LABEL */
+
+.input-group label{
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+    color: #111827;
+}
+
+/* INPUT */
+
+.input-group input{
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 2px solid #d1d5db;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+/* EFEITO INPUT */
+
+.input-group input:focus{
+    border-color: #2563eb;
+
+    box-shadow: 0px 0px 10px rgba(37,99,235,0.2);
+}
+
+/* BOTÃO */
+
+.btn-cadastro{
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.btn-cadastro:hover{
+    background-color: #1e40af;
+
+    transform: scale(1.02);
+}
+
+#mensagem-sucesso{
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: #dcfce7;
+
+    color: #166534;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+/* =========================
+   LISTA PROFISSIONAIS
+========================= */
+
+.lista-profissionais{
+    padding: 80px 40px;
+
+    background-color: #f5f7fa;
+}
+
+.lista-profissionais h1{
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 50px;
+}
+
+#cards-profissionais{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+
+
+.card-profissional{
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 2px solid #e5e7eb;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card-profissional:hover{
+    transform: translateY(-8px);
+
+    border-color: #2563eb;
+}
+
+.card-profissional h2{
+    margin-bottom: 20px;
+
+    color: #2563eb;
+}
+
+.card-profissional p{
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+}
