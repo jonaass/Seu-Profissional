@@ -1,6 +1,5 @@
-from pathlib import Path
 
-content = """# Seu Profissional
+Seu Profissional
 
 Plataforma web desenvolvida para conectar clientes a profissionais de diferentes áreas de serviços, permitindo cadastros simples e visualização de profissionais disponíveis de forma rápida e intuitiva.
 
@@ -133,11 +132,3 @@ Em desenvolvimento
 ## Autor
 
 Desenvolvido por Jonas Cunha.
-
-GitHub: https://github.com/jonaass
-"""
-
-path = Path("/mnt/data/README.txt")
-path.write_text(content, encoding="utf-8")
-
-print(f"Arquivo criado: {path}")
