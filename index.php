@@ -17,9 +17,8 @@
         </div>
 
         <nav class="menu">
-            <a href="./pages/profissinais.php">Profissionais Disponíveis</a>
-            <a href="./pages/cadastroprof.php">Seja Profissional</a>
-            <a href="./pages/cadastrocli.php">Seja Cliente</a>
+            <a href="./profissinais.php">Profissional</a>
+            <a href="./cadastroclien.php">Cliente</a>
         </nav>
 
     </header>
@@ -141,6 +140,108 @@ document.getElementById("formCadastro").addEventListener("submit", function(even
     "✅ Cadastro realizado com sucesso!";
 
     document.getElementById("mensagem-sucesso").style.display = "block";
+
+    this.reset();
+
+});
+
+</script>
+
+<!-- =========================
+     CADASTRO CLIENTE
+========================= -->
+
+<section class="cadastro-cliente">
+
+    <h1>Solicite um Serviço</h1>
+
+    <p>
+        Preencha as informações abaixo para encontrar
+        um profissional ideal para sua necessidade.
+    </p>
+
+    <form class="form-cliente" id="formCliente">
+
+        <div class="input-group">
+            <label>Nome Completo</label>
+            <input type="text" id="nomeCliente" required>
+        </div>
+
+        <div class="input-group">
+            <label>Serviço Solicitado</label>
+            <input type="text" id="servicoCliente" required>
+        </div>
+
+        <div class="input-group">
+            <label>Telefone</label>
+            <input type="tel" id="telefoneCliente" required>
+        </div>
+
+        <div class="input-group">
+            <label>E-mail</label>
+            <input type="email" id="emailCliente" required>
+        </div>
+
+        <div class="input-group">
+            <label>Descrição do Problema</label>
+            <input type="text" id="descricaoCliente" required>
+        </div>
+
+        <button type="submit" class="btn-cliente">
+            Solicitar Serviço
+        </button>
+
+        <p id="mensagem-cliente"></p>
+
+    </form>
+
+</section>
+
+<script>
+
+document.getElementById("formCliente")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const nome =
+    document.getElementById("nomeCliente").value;
+
+    const servico =
+    document.getElementById("servicoCliente").value;
+
+    const telefone =
+    document.getElementById("telefoneCliente").value;
+
+    const email =
+    document.getElementById("emailCliente").value;
+
+    const descricao =
+    document.getElementById("descricaoCliente").value;
+
+    const cliente = {
+        nome,
+        servico,
+        telefone,
+        email,
+        descricao
+    };
+
+    let clientes =
+    JSON.parse(localStorage.getItem("clientes")) || [];
+
+    clientes.push(cliente);
+
+    localStorage.setItem(
+        "clientes",
+        JSON.stringify(clientes)
+    );
+
+    document.getElementById("mensagem-cliente").innerHTML =
+    "✅ Solicitação enviada com sucesso!";
+
+    document.getElementById("mensagem-cliente").style.display =
+    "block";
 
     this.reset();
 
